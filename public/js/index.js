@@ -1,4 +1,3 @@
-const io = require("socket.io");
 let socket = io();
 
 socket.on("connect", function() {
