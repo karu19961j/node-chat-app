@@ -16,11 +16,6 @@ io.on("connection", socket => {
   socket.on("disconnect", () => {
     console.log("disconnected to client");
   });
-  socket.emit("newMessage", {
-    from: "Karan",
-    text: "Socket.IO",
-    createAt: 12412
-  });
   socket.on("createMessage", data => {
     io.emit("newMessage", {
       from: data.from,
