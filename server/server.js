@@ -22,7 +22,11 @@ io.on("connection", socket => {
     createAt: 12412
   });
   socket.on("createMessage", data => {
-    console.log(data, "recieved");
+    io.emit("newMessage", {
+      from: data.from,
+      text: data.text,
+      createAt: new Date().getTime()
+    });
   });
 });
 server.listen(port, () => {
