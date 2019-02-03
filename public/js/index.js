@@ -9,7 +9,3 @@ socket.on("disconnect", function() {
 socket.on("newMessage", function(data) {
   console.log(data, "message");
 });
-// socket.emit("createMessage", {
-//   from: "Test",
-//   text: "hello"
-// });
